@@ -38,15 +38,15 @@ for process, expected in [("background", 1_000_000.0), ("signal", 1_100.0)]:
 
 for key, value in list(globals().items()):
     if key.startswith(("NLL_value", "tmu_")):
-        assert np.isfinite(np.asarray(value)).all(), key
+        assert np.isfinite(np.asarray(value)).all(), (key, np.asarray(value))
 
 if "nll_manual" in globals():
-    assert np.isfinite(float(nll_manual([1.0])))
+    assert np.isfinite(float(nll_manual(np.array([1.0], dtype=np.float64))))
 if "model_nsbi" in globals():
     # Manual and workspace NLLs can differ by additive constants.
-    manual_delta = float(nll_manual([1.2]) - nll_manual([1.0]))
+    manual_delta = float(nll_manual(np.array([1.2], dtype=np.float64)) - nll_manual(np.array([1.0], dtype=np.float64)))
     workspace_delta = float(model_nsbi.model(np.array([1.2])) - model_nsbi.model(np.array([1.0])))
-    assert np.isclose(manual_delta, workspace_delta, atol=1e-5, rtol=1e-5)
+    assert np.isclose(manual_delta, workspace_delta, atol=1e-5, rtol=1e-5), (manual_delta, workspace_delta)
     from setup_local import data_signature
     for model_dir in ["models_SigvsRef", "models_BkgvsRef"]:
         assert Path(model_dir, "model0.onnx").is_file()

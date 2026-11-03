@@ -28,7 +28,7 @@ Quick-run settings:
 - One network with two 64-neuron hidden layers, batches of 512, and at most 20 epochs.
 - 31 points per likelihood scan and 20 bins for training diagnostics.
 
-The physics yields remain 1,000,000 background and 1,100 signal events. Those are **weighted expected yields**, not the number of simulated events. With this small Monte Carlo sample, fitted minima and closure plots will be noisy; these are teaching settings, not precision-analysis settings. Bins with zero expected events are omitted from the binned workspace to avoid undefined logarithms.
+The physics yields remain 1,000,000 background and 1,100 signal events. Those are **weighted expected yields**, not the number of simulated events. With this small Monte Carlo sample, fitted minima and closure plots will be noisy; these are teaching settings, not precision-analysis settings. Bins with zero expected events are omitted from the binned workspace to avoid undefined logarithms. The learned-summary histogram uses background quantiles to keep its bins populated with the small simulation sample.
 
 ## Models across notebooks
 
