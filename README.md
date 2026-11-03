@@ -6,7 +6,7 @@ Lecture slides and hands-on machine-learning activities for **Rafael Coelho Lope
 
 | Lecture | Topics | Materials |
 | --- | --- | --- |
-| 1. Neural Networks and Deep Learning | Computational graphs, automatic differentiation, gradient descent, regression, classification, and likelihood-ratio estimation | [Slides](lectures/Lecture1_Neural_Networks.pptx) · [Teaching script](lectures/Lecture1_Neural_Networks_Teaching_Script.docx) |
+| 1. Neural Networks and Deep Learning | Computational graphs, automatic differentiation, gradient descent, regression, classification, and likelihood-ratio estimation | [Slides](lectures/Lecture1_Neural_Networks.pptx) |
 | 2. Applications in Particle Physics | Simulation and the particle-physics likelihood, histogram-based inference, neural simulation-based inference, sufficient summaries, and likelihood ratios | [Slides](lectures/Lecture2_Applications.pptx) |
 
 Lecture 2 currently contains the introductory 29-slide section connecting the likelihood-ratio result from Lecture 1 to particle-physics inference.
