@@ -28,6 +28,10 @@ Open a Colab link and run the setup cell first. A CPU runtime is sufficient for 
 
 Run the cells in order and complete the marked exercises. The student placeholders intentionally raise `NotImplementedError` until implemented. Completed versions are available in the [companion solutions repository](https://github.com/rafaellopesdesa/ML_Mandi_solutions).
 
+## Lecture 2 application exercises
+
+Five [application notebooks](activities/application/README.md) follow the original NSBI tutorial order: summary statistics, data visualisation, signal/reference training, background/reference training, and parameter fitting. They use small fixed-seed samples, CPU training and local runtime storage, with an Open in Colab link at the top of each notebook. The final fit can regenerate its models in a fresh runtime.
+
 ## Acknowledgments
 
 The material builds on Michelle Kuchera's HSF-India lectures at IIT Madras and the simulation-based inference lectures given by Jay Sandesara and Rafael Coelho Lopes de Sa at TIFR. Credits for reused figures and diagrams are retained in the lecture materials.

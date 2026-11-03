@@ -1,0 +1,10 @@
+__pycache__/
+.ipynb_checkpoints/
+.toolkit/
+dataframes/
+models_*/
+plots*/
+saved_*/
+checkpoints/
+lightning_logs/
+*.zip
