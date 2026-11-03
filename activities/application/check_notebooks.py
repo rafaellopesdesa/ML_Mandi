@@ -51,6 +51,12 @@ if "model_nsbi" in globals():
     for model_dir in ["models_SigvsRef", "models_BkgvsRef"]:
         assert Path(model_dir, "model0.onnx").is_file()
         assert Path(model_dir, "training_data.sha256").read_text().strip() == data_signature()
+    # Re-running a fit must preserve matching local networks, even if old ZIPs remain.
+    from setup_local import ensure_trained_models
+    model_paths = [Path(d, "model0.onnx") for d in ["models_SigvsRef", "models_BkgvsRef"]]
+    before = [path.stat().st_mtime_ns for path in model_paths]
+    ensure_trained_models()
+    assert before == [path.stat().st_mtime_ns for path in model_paths]
 
 with TemporaryDirectory() as generated:
     generate_events(output_dir=generated)

@@ -107,6 +107,10 @@ def ensure_trained_models():
     """Reuse local models, import uploaded ZIPs, or run the two small trainings."""
     signature = data_signature()
     for model_dir, notebook_name in TRAINING_NOTEBOOKS.items():
+        required = [Path(model_dir, name) for name in ["model0.onnx", "model_scaler0.bin", "training_data.sha256"]]
+        if all(path.is_file() for path in required) and required[-1].read_text().strip() == signature:
+            print(f"Using local model: {model_dir}")
+            continue
         # In Colab, files uploaded with the Files sidebar initially land in /content.
         for archive in dict.fromkeys([Path(model_dir + ".zip"), Path("/content") / (model_dir + ".zip")]):
             if archive.is_file():
