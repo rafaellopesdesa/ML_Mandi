@@ -28,16 +28,6 @@ Open a Colab link and run the setup cell first. A CPU runtime is sufficient for 
 
 Run the cells in order and complete the marked exercises. The student placeholders intentionally raise `NotImplementedError` until implemented. Completed versions are available in the [companion solutions repository](https://github.com/rafaellopesdesa/ML_Mandi_solutions).
 
-## Supplementary notebooks
-
-These notebooks are retained from earlier teaching material and keep their original filenames. Their numbering does not describe the current two-lecture outline above.
-
-- [Convolutional neural networks with PyTorch](activities/Lecture2-CNN-torch.ipynb).
-- [Convolutional neural networks with TensorFlow/Keras](activities/Lecture2-CNN.ipynb), a legacy notebook.
-- [Autoencoders and variational autoencoders with TensorFlow/Keras](activities/Lecture3-VAE.ipynb), a legacy notebook.
-
-The current Lecture 1 exercises use JAX and PyTorch. The Colab setup instructions above apply to those four exercises; the supplementary notebooks retain their own setup and data requirements.
-
 ## Acknowledgments
 
 The material builds on Michelle Kuchera's HSF-India lectures at IIT Madras and the simulation-based inference lectures given by Jay Sandesara and Rafael Coelho Lopes de Sa at TIFR. Credits for reused figures and diagrams are retained in the lecture materials.
